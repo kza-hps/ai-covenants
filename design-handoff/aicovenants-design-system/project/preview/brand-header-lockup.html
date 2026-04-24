@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>aiCOVENANTS — Header lockup</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body); }
+  .bar { display: flex; align-items: center; padding: 18px 28px; border-bottom: 1px solid var(--rule); }
+  .bar.dark { background: var(--obsidian); color: var(--soft-ivory); border-color: var(--rule-on-dark); }
+  .lockup { display: flex; align-items: center; gap: 12px; }
+  .lockup img { width: 28px; height: 28px; object-fit: contain; }
+  .word { font-family: var(--font-archival); font-size: 16px; letter-spacing: var(--track-archival); font-weight: 500; text-transform: uppercase; }
+  .ai { font-family: var(--font-display); text-transform: lowercase; letter-spacing: 0.02em; font-weight: 500; font-style: italic; margin-right: 0.06em; color: var(--stone-gold); }
+  nav { margin-left: auto; display: flex; gap: 24px; font-size: 12px; text-transform: uppercase; letter-spacing: var(--track-archival); color: var(--fg-muted); }
+  .dark nav { color: #B6B0A2; }
+</style>
+</head>
+<body>
+  <div class="bar">
+    <div class="lockup">
+      <img src="../assets/mark-on-ivory.png" alt="" />
+      <span class="word"><span class="ai">ai</span>COVENANT</span>
+    </div>
+    <nav><span>Manifesto</span><span>Catalogue</span><span>Start a covenant</span></nav>
+  </div>
+  <div class="bar dark">
+    <div class="lockup">
+      <img src="../assets/mark-on-charcoal.png" alt="" />
+      <span class="word"><span class="ai">ai</span>COVENANT</span>
+    </div>
+    <nav><span>Manifesto</span><span>Catalogue</span><span>Start a covenant</span></nav>
+  </div>
+</body>
+</html>

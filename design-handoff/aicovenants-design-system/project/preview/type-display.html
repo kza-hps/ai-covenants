@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>aiCOVENANTS — Display type</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { margin: 0; padding: 28px 32px; background: var(--bg); color: var(--fg); }
+  .specimen { display: grid; grid-template-columns: 110px 1fr; gap: 28px; align-items: baseline; padding: 12px 0; border-top: 1px solid var(--rule); }
+  .specimen:first-of-type { border-top: 0; padding-top: 0; }
+  .role { font-family: var(--font-body); font-size: 11px; color: var(--fg-quiet); text-transform: uppercase; letter-spacing: var(--track-archival); padding-top: 10px; }
+  .ex { font-family: var(--font-display); color: var(--fg); }
+  .ex.eyebrow { font-family: var(--font-archival); font-size: 12px; text-transform: uppercase; letter-spacing: var(--track-archival); }
+  .meta { display: block; margin-top: 4px; font-family: var(--font-mono); font-size: 10.5px; color: var(--fg-quiet); }
+</style>
+</head>
+<body>
+  <div class="specimen">
+    <span class="role">Display</span>
+    <div>
+      <div class="ex" style="font-size:48px; line-height:1.05; letter-spacing:-0.01em">A public covenant ledger.</div>
+      <span class="meta">Cormorant Garamond · 400 · 60–88px · -0.01em tracking</span>
+    </div>
+  </div>
+  <div class="specimen">
+    <span class="role">H2</span>
+    <div>
+      <div class="ex" style="font-size:32px; line-height:1.2">Founding catalogue</div>
+      <span class="meta">Cormorant Garamond · 400 · 40px</span>
+    </div>
+  </div>
+  <div class="specimen">
+    <span class="role">H3</span>
+    <div>
+      <div class="ex" style="font-size:24px; line-height:1.25; font-weight:500">Human labour displaced or deferred</div>
+      <span class="meta">Cormorant Garamond · 500 · 30px</span>
+    </div>
+  </div>
+  <div class="specimen">
+    <span class="role">Eyebrow</span>
+    <div>
+      <div class="ex eyebrow">Brand foundations · ◆ · Volume I</div>
+      <span class="meta">Inter · 500 · 12px · 0.18em tracking · UPPERCASE</span>
+    </div>
+  </div>
+</body>
+</html>

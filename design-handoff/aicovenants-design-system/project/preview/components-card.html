@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>aiCOVENANTS — Catalogue card</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { margin: 0; padding: 24px; background: var(--bg); color: var(--fg); font-family: var(--font-body); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .card {
+    border: 1px solid var(--rule);
+    background: var(--surface);
+    padding: 22px 24px;
+    display: flex; flex-direction: column; gap: 10px;
+    transition: border-color var(--dur-quick) var(--ease-archival);
+  }
+  .card:hover { border-color: var(--rule-strong); }
+  .roman { font-family: var(--font-archival); font-size: 11px; letter-spacing: var(--track-archival); color: var(--fg-quiet); }
+  .title { font-family: var(--font-display); font-size: 22px; line-height: 1.2; color: var(--fg); }
+  .creator { font-size: 12px; color: var(--fg-muted); }
+  .desc { font-size: 13px; color: var(--fg-muted); line-height: 1.5; }
+  .row { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--rule); border-radius: var(--r-pill); padding: 3px 10px; font-size: 10px; text-transform: uppercase; letter-spacing: var(--track-archival); color: var(--fg-muted); }
+  .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .accent-line { height: 1px; background: var(--stone-gold); width: 36px; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="grid">
+  <div class="card">
+    <span class="roman">II ·  COVENANT</span>
+    <span class="title">FASCIA</span>
+    <div class="accent-line"></div>
+    <span class="creator">Kauri Tukere · Hero's Journey Creative</span>
+    <p class="desc">A long-form essay on connective tissue, told as a series of guided breathing observations.</p>
+    <div class="row">
+      <span class="chip"><span class="dot" style="background:#6B7F65"></span>Active</span>
+      <span class="meta">v1.2 · 14 Mar 2026</span>
+    </div>
+  </div>
+  <div class="card">
+    <span class="roman">V ·  COVENANT</span>
+    <span class="title">ElevenLabs voice-use request</span>
+    <div class="accent-line"></div>
+    <span class="creator">Kauri Tukere</span>
+    <p class="desc">A personal covenant requesting that no synthetic voice trained on this person's speech be used commercially.</p>
+    <div class="row">
+      <span class="chip"><span class="dot" style="background:#D6C39A"></span>Pending</span>
+      <span class="meta">v0.4 · 02 Apr 2026</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

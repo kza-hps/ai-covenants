@@ -1,0 +1,220 @@
+/* aiCOVENANTS — Design tokens
+ * Palette: Obsidian Charcoal · Stone Gold · Slate Mist · Soft Ivory
+ * Type: Cormorant Garamond (display/serif) + Inter (body/UI)
+ * Mood: public archive, civic trust record, philosophical journal — restrained.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ── Brand palette ───────────────────────────────────── */
+  --obsidian: #232A2F;          /* primary dark */
+  --stone-gold: #D6C39A;        /* primary accent */
+  --slate-mist: #596066;        /* secondary neutral */
+  --soft-ivory: #F2EBDD;        /* primary light */
+
+  /* Tonal extensions (derived, used sparingly) */
+  --obsidian-700: #1A2024;      /* deeper than obsidian for ceremonial bands */
+  --obsidian-500: #2C353B;      /* card surface on dark */
+  --obsidian-400: #3A444B;      /* hairline on dark */
+  --gold-300: #C2AE83;          /* hover/pressed gold */
+  --gold-200: #E0CFA9;          /* lighter gold for fills */
+  --slate-300: #8A9097;         /* meta text on light */
+  --ivory-200: #E8E0CE;         /* divider on ivory */
+  --ivory-100: #FAF6EC;         /* faint surface above ivory */
+
+  /* ── Semantic colours ────────────────────────────────── */
+  --bg: var(--soft-ivory);
+  --bg-deep: var(--obsidian);
+  --surface: #FFFEFA;
+  --surface-deep: var(--obsidian-500);
+
+  --fg: var(--obsidian);
+  --fg-muted: var(--slate-mist);
+  --fg-quiet: var(--slate-300);
+  --fg-on-dark: var(--soft-ivory);
+  --fg-on-dark-muted: #B6B0A2;
+
+  --accent: var(--stone-gold);
+  --accent-hover: var(--gold-300);
+  --accent-on-light: #A88E5A;   /* gold dark enough to read on ivory */
+
+  --rule: rgba(35, 42, 47, 0.18);
+  --rule-strong: rgba(35, 42, 47, 0.45);
+  --rule-on-dark: rgba(214, 195, 154, 0.28);
+  --rule-on-dark-strong: rgba(214, 195, 154, 0.55);
+
+  --status-active: #6B7F65;     /* a quiet green */
+  --status-pending: var(--stone-gold);
+  --status-withdrawn: #8A6F6B;  /* a muted clay */
+
+  /* ── Typography ──────────────────────────────────────── */
+  --font-display: 'Cormorant Garamond', 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-archival: 'Cinzel', 'Cormorant Garamond', Georgia, serif; /* lightly tracked uppercase */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Scale — generous, archival */
+  --fs-eyebrow: 0.75rem;        /* 12 — uppercase tracked label */
+  --fs-meta: 0.8125rem;         /* 13 — metadata */
+  --fs-body-sm: 0.875rem;       /* 14 */
+  --fs-body: 1rem;              /* 16 */
+  --fs-body-lg: 1.125rem;       /* 18 — manifesto body */
+  --fs-lead: 1.375rem;          /* 22 */
+  --fs-h4: 1.5rem;              /* 24 */
+  --fs-h3: 1.875rem;            /* 30 */
+  --fs-h2: 2.5rem;              /* 40 */
+  --fs-h1: 3.75rem;             /* 60 */
+  --fs-display: 5.5rem;         /* 88 — hero wordmark */
+
+  --lh-tight: 1.08;
+  --lh-snug: 1.25;
+  --lh-body: 1.6;
+  --lh-loose: 1.75;
+
+  --track-tight: -0.01em;
+  --track-normal: 0;
+  --track-wide: 0.08em;
+  --track-archival: 0.18em;     /* uppercase eyebrows / wordmark */
+
+  /* ── Spacing — 4px base ──────────────────────────────── */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --s-10: 128px;
+
+  /* Layout */
+  --container-narrow: 720px;    /* manifesto reading column */
+  --container: 1080px;          /* catalogue */
+  --container-wide: 1280px;     /* full landing */
+
+  /* Radii — small, archival; nothing pillowy */
+  --r-0: 0;
+  --r-1: 2px;
+  --r-2: 4px;
+  --r-pill: 999px;              /* used only for status chips */
+
+  /* Borders */
+  --bw-hair: 1px;
+  --bw-rule: 1px;
+  --bw-frame: 2px;              /* archival frames around ceremonial blocks */
+
+  /* Elevation — flat archival; shadow is rare */
+  --shadow-none: none;
+  --shadow-page: 0 1px 0 rgba(35, 42, 47, 0.05);
+  --shadow-frame: 0 0 0 1px var(--rule);
+
+  /* Motion */
+  --ease-archival: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --dur-quick: 140ms;
+  --dur-normal: 240ms;
+  --dur-slow: 480ms;
+}
+
+/* ── Element defaults ──────────────────────────────────── */
+html { color: var(--fg); background: var(--bg); }
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--track-tight);
+  text-wrap: pretty;
+}
+h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--track-tight);
+  text-wrap: pretty;
+}
+h3, .h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-h3);
+  line-height: var(--lh-snug);
+}
+h4, .h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-h4);
+  line-height: var(--lh-snug);
+}
+
+.eyebrow,
+.archival-label {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-archival);
+  color: var(--fg-muted);
+}
+
+/* Wordmark — lowercase 'ai' is mandatory.
+ * Cinzel is an uppercase-only font, so the 'ai' glyphs must use the
+ * companion serif (Cormorant Garamond) to render true lowercase letterforms.
+ */
+.wordmark {
+  font-family: var(--font-archival);
+  text-transform: uppercase;
+  letter-spacing: var(--track-archival);
+  font-weight: 500;
+}
+.wordmark .wordmark-ai {
+  font-family: var(--font-display);     /* Cormorant Garamond — has true lowercase */
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-style: italic;                    /* gentle visual cue: 'ai' as the lesser partner */
+  margin-right: 0.06em;
+}
+
+p, .body { font-size: var(--fs-body); line-height: var(--lh-body); }
+.lead { font-family: var(--font-display); font-size: var(--fs-lead); line-height: var(--lh-loose); font-weight: 400; }
+.meta { font-size: var(--fs-meta); color: var(--fg-muted); }
+
+a { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; text-decoration-color: var(--rule-strong); }
+a:hover { text-decoration-color: var(--accent-on-light); }
+
+hr { border: 0; border-top: var(--bw-hair) solid var(--rule); margin: var(--s-7) 0; }
+
+/* Archival hairline divider with gold lozenge — used between sections */
+.divider-lozenge {
+  display: flex; align-items: center; gap: var(--s-4);
+  color: var(--accent-on-light);
+}
+.divider-lozenge::before,
+.divider-lozenge::after {
+  content: ""; flex: 1; height: 1px; background: var(--rule);
+}
+.divider-lozenge::before { background: linear-gradient(to right, transparent, var(--rule) 30%); }
+.divider-lozenge::after { background: linear-gradient(to left, transparent, var(--rule) 30%); }
+
+/* On dark surfaces */
+.on-dark {
+  background: var(--obsidian);
+  color: var(--fg-on-dark);
+}
+.on-dark a { color: var(--fg-on-dark); text-decoration-color: var(--rule-on-dark-strong); }
+.on-dark .eyebrow,
+.on-dark .archival-label,
+.on-dark .meta { color: var(--fg-on-dark-muted); }
+.on-dark hr,
+.on-dark .divider-lozenge::before,
+.on-dark .divider-lozenge::after { border-color: var(--rule-on-dark); background: var(--rule-on-dark); }

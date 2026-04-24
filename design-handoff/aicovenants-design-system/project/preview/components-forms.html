@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>aiCOVENANTS — Form fields</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { margin: 0; padding: 28px 32px; background: var(--bg); color: var(--fg); font-family: var(--font-body); }
+  .field { display: flex; flex-direction: column; gap: 6px; padding-bottom: 18px; }
+  label { font-size: 11px; text-transform: uppercase; letter-spacing: var(--track-archival); color: var(--fg-muted); }
+  label .req { color: var(--accent-on-light); margin-left: 4px; }
+  input, textarea {
+    font-family: var(--font-body); font-size: 15px; color: var(--fg);
+    background: transparent;
+    border: 0; border-bottom: 1px solid var(--rule-strong);
+    padding: 6px 0;
+    outline: none;
+  }
+  input:focus, textarea:focus { border-bottom-color: var(--accent-on-light); }
+  textarea { resize: none; min-height: 48px; }
+  .help { font-size: 12px; color: var(--fg-muted); }
+</style>
+</head>
+<body>
+  <div class="field">
+    <label for="work">Name of work <span class="req">◆</span></label>
+    <input id="work" type="text" value="Ho and the Baby Eater" />
+    <span class="help">As it will appear on the public record.</span>
+  </div>
+  <div class="field">
+    <label for="ai">AI contribution declaration <span class="req">◆</span></label>
+    <textarea id="ai">AI was used for transcript clean-up and for two background variations that were not used in the final cut.</textarea>
+  </div>
+</body>
+</html>
